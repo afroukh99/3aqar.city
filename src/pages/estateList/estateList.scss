@@ -1,0 +1,35 @@
+@import "../../responsive.scss";
+
+
+.estate {
+    min-height: calc(100vh - 100px);
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    position: relative;
+    width: 100%;
+
+    .estate-section {
+        flex: 6;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        width: 100%;
+    }
+
+    .map-section {
+        flex: 3;
+        height: 70vh;
+        width: 100%;
+        position: sticky;
+        top: 2rem;
+
+        @include md {
+            display: none;
+        }
+    
+       
+}
+
+}

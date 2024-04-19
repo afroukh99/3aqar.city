@@ -1,0 +1,113 @@
+@import "../../responsive.scss";
+@import "../../colors.scss";
+
+main {
+    flex: 1;
+    display: flex;
+    gap: 2rem;
+
+
+    .texts-section {
+        flex: 3;
+        display: flex;
+        align-items: center;
+        margin-top: 3rem;
+
+        @include sm {
+            width: 100%;
+        }
+
+
+        .container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 3rem;
+            padding:  2rem 4rem;
+
+            @include sm {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 4.8rem;
+                color: $txt-clr-2;
+
+                @include sm {
+                    font-size: 3rem;
+                }
+            }
+
+            p {
+                font-size: 1.4rem;
+                line-height: 1.6;
+                color: $txt-clr-4;
+
+                @include sm {
+                    font-size: 1.2;
+                }
+            }
+
+
+            .details {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                @include sm {
+                    display: none;
+                }
+
+                .item {
+                    display: flex;
+                    flex-direction: column;
+                    gap: .3rem;
+                    color: $txt-clr-3;
+
+
+
+                    h2 {
+                        font-size: 2.7rem;
+
+                        @include sm {
+                            font-size: 2.4rem;
+                        }
+                    }
+
+                    span {
+                        font-size: 1.2rem;
+
+                        @include sm {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+    }
+
+
+    .img-section {
+        flex: 2;
+        display: flex;
+        align-items: center;
+
+        @include md {
+            display: none;
+        }
+
+
+        img {
+            width: 100%;
+            height: 90%;
+            object-fit: cover;
+            border-radius: .4rem;
+
+
+        }
+    }
+}

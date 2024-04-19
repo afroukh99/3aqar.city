@@ -1,0 +1,105 @@
+@import "../../responsive.scss";
+@import "../../colors.scss";
+
+
+.login {
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+
+    form {
+        width: 40rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 2rem;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        border-radius: 1rem;
+        padding: 2rem;
+        box-shadow: 10px 11px 60px -18px rgba(0, 0, 0, 0.59);
+        -webkit-box-shadow: 10px 11px 60px -18px rgba(0, 0, 0, 0.59);
+        -moz-box-shadow: 10px 11px 60px -18px rgba(0, 0, 0, 0.59);
+
+        h1 {
+            text-align: center;
+            font-size: 2.8rem;
+            color: #31363F;
+        }
+
+
+
+
+        input {
+            padding: 1rem;
+            border: none;
+            border: 1px solid #e9e6e6;
+            border-radius: .4rem;
+            font-size: 1.3rem;
+            color: #31363F;
+            background-color: #f9f6f6;
+
+        }
+
+        .down {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            gap: 2rem;
+
+
+            span {
+                flex: 1;
+                font-size: 1.3rem;
+                cursor: pointer;
+                text-decoration: underline;
+                color: rgb(72, 71, 71);
+
+                &:hover {
+                    color: #31363F;
+                }
+
+                @include sm {
+                    font-size: 1.2rem;
+                }
+            }
+
+            button {
+                flex: 1;
+                padding: .8rem;
+                border-radius: .3rem;
+                background-color: $bg-clr-2;
+                color: white;
+                font-size: 1.6rem;
+                cursor: pointer;
+
+
+                &:hover {
+                    background-color: #104366;
+                }
+            }
+        }
+
+        .google-btn {
+            background-color: inherit;
+            padding: 1rem;
+            font-size: 1.4rem;
+            cursor: pointer;
+            border-radius: .6rem;
+            color: #31363F;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            background-color: #f9f6f6;
+
+            img {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
+
+    }
+
+}

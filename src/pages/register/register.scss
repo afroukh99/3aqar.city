@@ -1,0 +1,141 @@
+@import "../../responsive.scss";
+@import "../../colors.scss";
+
+
+.register {
+    display: flex;
+    justify-content: center;
+
+
+    form {
+        width: 50rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        margin: 5rem;
+        padding: 3rem;
+        border-radius: 1rem;
+        box-shadow: 10px 11px 60px -18px rgba(0, 0, 0, 0.59);
+        -webkit-box-shadow: 10px 11px 60px -18px rgba(0, 0, 0, 0.59);
+        -moz-box-shadow: 10px 11px 60px -18px rgba(0, 0, 0, 0.59);
+
+       
+
+
+        h1 {
+            text-align: center;
+            font-size: 2.8rem;
+            color: #31363F;
+        }
+
+        .inputs-container {
+            display: flex;
+            gap: 2rem;
+
+
+           
+
+            input {
+                flex: 1;
+                padding: 1rem;
+                border: none;
+                border: 1px solid #e9e6e6;
+                border-radius: .4rem;
+                font-size: 1.3rem;
+                color: #31363F;
+                background-color: #f9f6f6;
+
+
+        @include sm {
+            width: 13rem;
+        }
+
+            }
+        }
+
+
+
+        .down {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            gap: 2rem;
+
+
+
+            span {
+                flex: 1;
+                font-size: 1.3rem;
+                text-decoration: underline;
+                color: rgb(72, 71, 71);
+
+
+                b {
+                    cursor: pointer;
+                }
+
+                &:hover {
+                    color: #31363F;
+                }
+
+                @include sm {
+                    font-size: 1.1rem;
+                }
+            }
+
+
+            
+
+
+            button {
+                flex: 1;
+                padding: .8rem;
+                border-radius: .3rem;
+                background-color: $bg-clr-2;
+                color: white;
+                font-size: 1.6rem;
+                cursor: pointer;
+
+                @include sm {
+                    font-size: 1.4rem;
+                }
+
+
+                &:hover {
+                    background-color: #104366;
+                }
+            }
+
+
+
+        }
+
+
+
+
+
+        .google-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem;
+            background-color: #f9f6f6;
+            font-size: 1.4rem;
+            border-radius: .6rem;
+            cursor: pointer;
+            color: #31363F;
+          
+            img {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
+
+
+
+
+
+    }
+}

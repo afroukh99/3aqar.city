@@ -1,0 +1,195 @@
+@import "../../responsive.scss";
+@import "../../colors.scss";
+
+
+
+.nav-bar {
+    display: flex;
+    flex-direction: column;
+    height: 10rem;
+
+
+    header {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: $bg-clr-2;
+        color: $txt-clr-soft;
+        padding: 1.5rem;
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            
+
+            span {
+                font-size: 1.4rem;
+                font-weight: 400;
+                @include sm {
+                font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        padding: 1.5rem 0rem;
+       
+
+        a {
+            transition: all .4 ease;
+
+            &:hover {
+                scale: 1.05;
+            }
+        }
+
+        .left {
+            flex: 3;
+            display: flex;
+            align-items: center;
+            gap: 5rem;
+
+            .logo {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+
+                img {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    object-fit: cover;
+                }
+
+                span {
+                    color: $txt-clr-1;
+                    font-size: 2.5rem;
+                    font-weight: 800;
+
+                    @include md {
+                        display: none;
+                    }
+
+                    @include sm {
+                        display: none;
+                    }
+
+
+
+                    i {
+                        color: #427D9D;
+                        font-weight: 600;
+                        font-size: 2rem;
+                    }
+                }
+
+            }
+
+            .links {
+                display: flex;
+                gap: 3.5rem;
+
+                @include sm {
+                    display: none;
+                }
+
+
+                a {
+                    color: $txt-clr-3;
+                    font-size: 1.4;
+                }
+            }
+        }
+
+
+        .right {
+            flex: 2;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 2.5rem;
+            height: 100%;
+
+
+            .menu-img {
+                display: none;
+                width: 3rem;
+                height: 3rem;
+                z-index: 928;
+                cursor: pointer;
+
+
+                @include sm {
+                    display: initial;
+                }
+
+            }
+
+            .menu {
+                background-color: $bg-clr-1;
+                height: 100vh;
+                width: 50%;
+                position: absolute;
+                top: 0;
+                right: -50%;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 4rem;
+                transition: all 1s ease;
+                display: none;
+                z-index: 212;
+
+                @include sm {
+                    display: flex;
+                }
+
+
+                &.active {
+                    right: 0;
+                }
+
+
+                a {
+                    color: $txt-clr-soft;
+                }
+            }
+
+
+
+
+            .button {
+                font-size: 1.5rem;
+                color: $txt-clr-3;
+                padding: .6rem .9rem;
+
+                @include sm {
+                    display: none;
+                }
+
+                &:first-child {
+                    background-color: inherit;
+                }
+
+
+                &:last-child {
+                    background-color: $bg-clr-1;
+                    color: $txt-clr-soft;
+                    border-radius: .3rem;
+                }
+
+            }
+
+
+
+
+
+        }
+    }
+}

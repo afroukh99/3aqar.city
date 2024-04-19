@@ -1,0 +1,38 @@
+@import "../../colors.scss";
+
+
+.pin-container {
+    display: flex;
+    gap: .5rem;
+
+    img {
+        width: 5rem;
+        height: 5rem;
+        object-fit: cover;
+        border-radius: .2rem;
+    }
+
+    .pin-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        h3 {
+            font-size: 1rem;
+            color: $txt-clr-2;
+        }
+
+
+        .bedroom {
+            color: $txt-clr-3;
+            font-size: 1rem;
+        }
+
+        .price {
+            font-size: .9rem;
+            color: $txt-clr-4;
+            
+        }
+
+    }
+}

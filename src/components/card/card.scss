@@ -1,0 +1,164 @@
+@import "../../responsive.scss";
+@import "../../colors.scss";
+
+
+
+.card {
+    width: 100%;
+    height: 22rem;
+    display: flex;
+    gap: 2rem;
+
+    @include sm {
+        height: 18rem;
+        gap: 1rem;
+    }
+
+
+    .img-container {
+        flex: 3;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: .6rem;
+            cursor: pointer;
+
+
+            @include sm {
+                border-radius: unset;
+                object-fit: cover;
+            }
+            
+        }
+    }
+
+
+    .details {
+        flex: 3;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+
+
+
+        h2 {
+            font-size: 1.9rem;
+            color: $txt-clr-3;
+
+            @include sm {
+                font-size: 1.2rem;
+            }
+        }
+
+        .location {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: $txt-clr-4;
+            font-size: 1.3rem;
+
+            .icon {
+                font-size: medium;
+            }
+
+            @include sm {
+                font-size: 1rem;
+                gap: .5rem;
+            }
+
+        }
+
+        .price {
+            color: $txt-clr-soft;
+            width: 8rem;
+            background-color: $bg-clr-2;
+            text-align: center;
+            border-radius: .4rem;
+            font-weight: 600;
+
+            @include sm {
+                font-size: 1.3rem;
+                width: 6rem;
+            }
+        }
+
+        .services {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: auto;
+            color: $txt-clr-4;
+
+            .property-details,
+            .property-details>span,
+            .amenities {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+            }
+
+
+
+
+            .property-details {
+
+                span {
+                    padding: .4rem;
+                    border-radius: .3rem;
+                    background-color: $txt-clr-soft;
+                    font-size: 1.3rem;
+
+                    @include sm {
+                        border-radius: .2rem;
+                        font-size: 1rem;
+                    }
+
+                span {
+                    @include sm {
+                        display: none;
+                    }
+                }
+
+                    .icon {
+                        font-size: medium;
+                    }
+
+                }
+            }
+
+            .amenities {
+
+                .icon {
+                    font-size: medium;
+                }
+                .bookmark {
+                    cursor: pointer;
+                    @include sm {
+                        font-size: medium;
+                    }
+
+                    &.active {
+                        color: $bg-clr-2;
+                    }
+
+
+                    &:hover {
+                        color: $bg-clr-2;
+                    }
+                }
+            }
+
+
+        }
+
+
+
+
+    }
+
+
+
+}

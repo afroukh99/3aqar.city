@@ -1,0 +1,102 @@
+@import "../../responsive.scss";
+@import "../../colors.scss";
+
+
+.search-section {
+
+
+    .buttons {
+
+
+        button {
+            background-color: inherit;
+            color: $txt-clr-4;
+            padding: 1rem 2rem;
+            border: 1px solid #B5B3B3;
+            border-bottom: none;
+            cursor: pointer;
+            transition: background-color .4s ease;
+            font-size: 1.3rem;
+
+            &.active {
+                background-color: $bg-clr-2;
+                color: $txt-clr-soft;
+            }
+
+
+            &:first-child {
+                border-radius: .3rem 0rem 0rem 0rem;
+            }
+
+            &:nth-child(2) {
+                border-left: none;
+                border-right: none;
+            }
+
+            &:last-child {
+                border-radius: 0rem .3rem 0rem 0rem;
+            }
+        }
+    }
+
+
+    form {
+        height: 4.5rem;
+        display: flex;
+        border: 1px solid #999;
+        border-radius: 0rem .3rem .3rem .3rem;
+
+        @include sm {
+            flex-direction: column;
+            height: 17rem;
+            min-width: 30rem;
+            border: unset;
+        }
+
+        input {
+            border: none;
+            padding: .4rem .8rem;
+            color: $txt-clr-3;
+            font-size: 1.6;
+
+            @include md {
+                width: 17rem;
+            }
+
+            @include sm {
+                width: 100%;
+                border: 1px solid #999;
+                padding: 1rem;
+
+
+                &:first-child {
+                border-radius: 0rem .3rem 0rem 0rem;
+                }
+
+                &:nth-child(1) ,&:nth-child(2)  {
+                    border-bottom: none;
+                }
+
+            }
+        }
+
+        button {
+            flex: 1;
+            background-color: $bg-clr-2;
+            cursor: pointer;
+
+            @include sm {
+                flex: unset;
+                padding: .5rem;
+                border-radius: 0rem 0rem .3rem .3rem;
+            }
+
+            img {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
+    }
+
+
+}
