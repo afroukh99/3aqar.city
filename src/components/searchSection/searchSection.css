@@ -1,0 +1,81 @@
+.search-section .buttons button {
+  background-color: inherit;
+  color: #414246;
+  padding: 1rem 2rem;
+  border: 1px solid #B5B3B3;
+  border-bottom: none;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+  font-size: 1.3rem;
+}
+.search-section .buttons button.active {
+  background-color: #63809e;
+  color: #f4f4f4;
+}
+.search-section .buttons button:first-child {
+  border-radius: 0.3rem 0rem 0rem 0rem;
+}
+.search-section .buttons button:nth-child(2) {
+  border-left: none;
+  border-right: none;
+}
+.search-section .buttons button:last-child {
+  border-radius: 0rem 0.3rem 0rem 0rem;
+}
+.search-section form {
+  height: 4.5rem;
+  display: flex;
+  border: 1px solid #999;
+  border-radius: 0rem 0.3rem 0.3rem 0.3rem;
+}
+@media (max-width: 738px) {
+  .search-section form {
+    flex-direction: column;
+    height: 17rem;
+    min-width: 30rem;
+    border: unset;
+  }
+}
+.search-section form input {
+  border: none;
+  padding: 0.4rem 0.8rem;
+  color: #31363F;
+  font-size: 1.6;
+}
+@media (max-width: 1024px) {
+  .search-section form input {
+    width: 17rem;
+  }
+}
+@media (max-width: 738px) {
+  .search-section form input {
+    width: 100%;
+    border: 1px solid #999;
+    padding: 1rem;
+  }
+  .search-section form input:first-child {
+    border-radius: 0rem 0.3rem 0rem 0rem;
+  }
+  .search-section form input:nth-child(1), .search-section form input:nth-child(2) {
+    border-bottom: none;
+  }
+}
+.search-section form .search-button {
+  flex: 1;
+  background-color: #63809e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+@media (max-width: 738px) {
+  .search-section form .search-button {
+    flex: unset;
+    padding: 0.5rem;
+    border-radius: 0rem 0rem 0.3rem 0.3rem;
+  }
+}
+.search-section form .search-button img {
+  width: 2.5rem;
+  height: 2.5rem;
+}/*# sourceMappingURL=searchSection.css.map */

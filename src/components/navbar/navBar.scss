@@ -1,195 +1,154 @@
-@import "../../responsive.scss";
-@import "../../colors.scss";
+@import "../../sass/colors.scss";
+@import "../../sass/responsive.scss";
 
 
+.navbar {
+    height: 7rem;
+    width: 100%;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    background-color: white;
 
-.nav-bar {
-    display: flex;
-    flex-direction: column;
-    height: 10rem;
 
+    a {
+        font-size: 1.6rem;
+        color: map-get($big-stone, "900");
+        font-family: "Noto Kufi Arabic", sans-serif;
+        cursor: pointer;
 
-    header {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        background-color: $bg-clr-2;
-        color: $txt-clr-soft;
-        padding: 1.5rem;
-
-        div {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            
-
-            span {
-                font-size: 1.4rem;
-                font-weight: 400;
-                @include sm {
-                font-size: 1rem;
-                }
-            }
+        @include md {
+            font-size: 1.4rem;
         }
     }
+
 
     nav {
         display: flex;
         align-items: center;
-        padding: 1.5rem 0rem;
-       
+        justify-content: space-between;
 
-        a {
-            transition: all .4 ease;
 
-            &:hover {
-                scale: 1.05;
+
+        .menu {
+            width: 3rem;
+            height: 3rem;
+            cursor: pointer;
+            display: none;
+
+            @include sm {
+                display: block;
             }
         }
 
-        .left {
-            flex: 3;
-            display: flex;
-            align-items: center;
-            gap: 5rem;
+        .logo-name {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: map-get($big-stone, "900");
 
-            .logo {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 1rem;
-
-                img {
-                    width: 2.5rem;
-                    height: 2.5rem;
-                    object-fit: cover;
-                }
-
-                span {
-                    color: $txt-clr-1;
-                    font-size: 2.5rem;
-                    font-weight: 800;
-
-                    @include md {
-                        display: none;
-                    }
-
-                    @include sm {
-                        display: none;
-                    }
-
-
-
-                    i {
-                        color: #427D9D;
-                        font-weight: 600;
-                        font-size: 2rem;
-                    }
-                }
-
+            @include md {
+                font-size: 2.3rem;
             }
 
-            .links {
-                display: flex;
-                gap: 3.5rem;
-
-                @include sm {
-                    display: none;
-                }
-
-
-                a {
-                    color: $txt-clr-3;
-                    font-size: 1.4;
-                }
+            @include sm {
+                font-size: 2.8rem;
             }
+
         }
 
-
-        .right {
-            flex: 2;
+        .nav-btns {
             display: flex;
-            justify-content: flex-end;
             align-items: center;
-            gap: 2.5rem;
-            height: 100%;
+            gap: 1rem;
 
-
-            .menu-img {
-                display: none;
-                width: 3rem;
-                height: 3rem;
-                z-index: 928;
+            button {
+                padding: 1rem;
+                border-radius: 2rem;
+                font-size: 1.6rem;
+                color: white;
+                background-color: map-get($big-stone , '900');
                 cursor: pointer;
 
+                @include md {
+                    font-size: 1.4rem;
+                    padding: .8rem;
+                }
 
                 @include sm {
-                    display: initial;
+                    font-size: 1.2rem;
                 }
 
             }
+        }
 
-            .menu {
-                background-color: $bg-clr-1;
-                height: 100vh;
-                width: 50%;
-                position: absolute;
-                top: 0;
-                right: -50%;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                gap: 4rem;
-                transition: all 1s ease;
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+            @include md {
+                gap: 1rem;
+            }
+
+            @include sm {
                 display: none;
-                z-index: 212;
-
-                @include sm {
-                    display: flex;
-                }
-
-
-                &.active {
-                    right: 0;
-                }
-
-
-                a {
-                    color: $txt-clr-soft;
-                }
             }
-
-
-
-
-            .button {
-                font-size: 1.5rem;
-                color: $txt-clr-3;
-                padding: .6rem .9rem;
-
-                @include sm {
-                    display: none;
-                }
-
-                &:first-child {
-                    background-color: inherit;
-                }
-
-
-                &:last-child {
-                    background-color: $bg-clr-1;
-                    color: $txt-clr-soft;
-                    border-radius: .3rem;
-                }
-
-            }
-
-
-
-
 
         }
+
+
+
+    }
+
+
+    .mobile-nav {
+        display: none;
+        z-index: 43543;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        background-color: white;
+
+
+
+        .exit {
+            font-size: 2rem;
+            padding: 0rem 1rem;
+            border-radius: .2rem;
+            border: 1px solid #ddd;
+            background-color: #eee;
+            color: #594a4e;
+            cursor: pointer;
+        }
+
+        @include sm {
+            position: fixed;
+            top: 0;
+            right: -90%;
+            width: 20rem;
+            height: 100vh;
+            padding: 2rem;
+            display: block;
+            background-color: #f6f6f6;
+            transition: right .2s ease;
+
+            &.active {
+                right: 0;
+
+                @include sm {
+                    right: 0;
+                }
+            }
+
+        }
+
+        .wrapper {
+            margin-top: 4rem;
+            height: 100%;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4rem;
+        }
+
     }
 }

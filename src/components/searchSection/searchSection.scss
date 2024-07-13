@@ -1,5 +1,7 @@
-@import "../../responsive.scss";
-@import "../../colors.scss";
+@import "../../sass/responsive.scss";
+@import "../../sass/colors.scss";
+
+
 
 
 .search-section {
@@ -80,9 +82,12 @@
             }
         }
 
-        button {
+        .search-button {
             flex: 1;
             background-color: $bg-clr-2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             cursor: pointer;
 
             @include sm {

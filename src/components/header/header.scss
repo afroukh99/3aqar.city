@@ -1,0 +1,73 @@
+@import "../../sass/colors.scss";
+@import "../../sass/responsive.scss";
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include sm {
+        padding: 0rem 1rem;
+    }
+
+
+    .header-links {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        a {
+            color: map-get($big-stone , '900');
+            font-size: 1.6rem;
+
+
+            @include md {
+                font-size: 1.4rem;
+            }
+
+            
+            @include sm {
+                font-size: 1.3rem;
+            }
+
+            &:last-child {
+                color: gray;
+            }
+        }
+
+    }
+
+
+    .results {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        .item {
+            padding: 1rem;
+            border-radius: .5rem;
+            color: #3f3f46;
+            background-color: #fcfcfc;
+            border: 1px solid #eee;
+            font-size: 1.3rem;
+            font-weight: 500;
+            cursor: pointer;
+            font-family: "Rubik", sans-serif;
+            transition: box-shadow 0.5s ease;
+            box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+
+            @include sm {
+                font-size: 1.2rem;
+            }
+        
+
+
+
+        }
+
+    }
+
+
+}

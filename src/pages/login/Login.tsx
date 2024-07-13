@@ -1,42 +1,43 @@
-import React, { useState } from 'react'
+import { useState } from "react";
 import "./login.scss"
+import { Link } from "react-router-dom";
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
 
 
+const Login = () => {
 
+  const [active, setActive] = useState("");
+  const [showPass, setShowPass] = useState(false);
 
-
-
-const Login: React.FC = () => {
-    type InputsType = {
-        username : string,
-        password : string,
-    }
-    
-    const [input , setInput] = useState<InputsType>({
-        username : "",
-        password : "",
-    })
-    
-    
-    const handleChange =  (e :React.ChangeEvent<HTMLInputElement> ) => {
-            const {name , value} = e.target;
-            setInput({...input,[name] : value})
-    }
-
-    return (
-        <div className='login'>
-            <form action="">
-                <h1>Login to your account</h1>
-                <input onChange={handleChange} name='username' type="text" placeholder=' Username' />
-                <input onChange={handleChange} name='password' type="password" placeholder=' Password' />
-                <div className="down">
-                    <button>Login</button>
-                    <span>Forgot password?</span>
-                </div>
-                <button className='google-btn'> <img src="google.png" alt="" /> Sign in with Google</button>
-            </form>
+  return (
+    <div className='login'>
+      <h1>انضم إلى سكني</h1>
+      <form action="">
+        <div className="buttons">
+          <span onClick={() => setActive("")} className={`${active === '' && 'active'}`}>تسجيل الدخول</span>
+          <Link to={"/signup"}>
+            <span onClick={() => setActive("signup")} className={`${active === 'signup' && 'active'}`} >إنشاء حساب</span>
+          </Link>
         </div>
-    )
+        <label htmlFor="">رقم الجوال</label>
+        <input type="text" placeholder='الرجاء كتابة رقم الجوال ...' />
+        <label htmlFor="">كلمة المرور</label>
+        <div className="password">
+          <input type={`${showPass ? 'text' : 'password'}`} placeholder='الرجاء كتابة كلمة المرور ...' />
+          {
+            showPass ?
+              <FaEye onClick={() => setShowPass(false)} className="eye" />
+              :
+              <FaEyeSlash onClick={() => setShowPass(true)} className="eye" />
+          }
+        </div>
+
+        <button className="">دخول</button>
+        <span>هل نسيت كلمة المرور؟</span>
+      </form>
+    </div>
+  )
 }
 
 export default Login

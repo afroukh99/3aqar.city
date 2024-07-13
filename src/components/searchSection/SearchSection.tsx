@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import "./searchSection.scss"
 import { queryType } from '../../types/types'
+import { Link } from 'react-router-dom'
 
 const btnType = [
   "All",
@@ -8,7 +9,6 @@ const btnType = [
   "Rent",
 ]
 
-104378
 const SearchSection = () => {
 
 
@@ -21,9 +21,18 @@ const SearchSection = () => {
   })
 
 
+
   const switchType = (type: string) => {
     setQuery(prev => ({ ...prev, type }))
   }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { value, name } = e.target;
+    setQuery(prev => ({ ...prev, [name]: value }))
+  }
+
+
+
 
   return (
     <div className='search-section'>
@@ -37,10 +46,10 @@ const SearchSection = () => {
         }
       </div>
       <form >
-        <input type="text" placeholder='City' />
-        <input type="number" placeholder='Min Price' min={0} max={1000000} />
-        <input type="number" placeholder='Max Price' min={100} max={1000000} />
-        <button><img src="../search.png" alt="" /></button>
+        <input onChange={handleChange} name='city' type="text" placeholder='City' />
+        <input onChange={handleChange} name='min' type="number" placeholder='Min Price' min={0} max={1000000} />
+        <input onChange={handleChange} name='max' type="number" placeholder='Max Price' min={100} max={1000000} />
+        <Link className='search-button' to={`/list?city=${query.city}`}><img src="../search.png" alt="" /></Link>
       </form>
     </div>
   )

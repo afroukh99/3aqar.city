@@ -1,17 +1,28 @@
 import { Dispatch, ReactNode, SetStateAction } from "react";
 
-export interface dataType  {
-    id : number;
-    title: string;
-    img: string;
-    bedroom: number;
-    bathroom: number;
-    price: number;
-    address: string;
-    latitude: number;
-    longitude: number;
+export interface Property {
+  streetWidth: number;
+  area: number;
+  familiesOrSingles: boolean;
+  bedrooms: number;
+  livingRooms: number;
+  bathrooms: number;
+  floor: number;
+  propertyAge: number;
+  elevator: boolean;
+  kitchen: boolean;
+  dateAdded: string; 
+  views: number;
 }
 
+export interface userType {
+  username :string,
+  fullName : string,
+  email :string,
+  password :string,
+  confirmPass ?: string,
+  phone : string,
+}
 
 
 export  type queryType = {
@@ -28,4 +39,19 @@ export  type queryType = {
     modalIsOpen : boolean,
     children : ReactNode
   }
-  
+
+
+
+
+  export type RegisterInputsType = {
+    username: string,
+    email: string,
+    password: string,
+    confirmPassword: string,
+    phone: string ,
+}
+
+export type LoginInputsType = {
+  username: string,
+  password: string,
+}

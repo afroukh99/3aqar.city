@@ -1,164 +1,146 @@
-@import "../../responsive.scss";
-@import "../../colors.scss";
+@import "../../sass/responsive.scss";
+@import "../../sass/colors.scss";
 
 
 
 .card {
     width: 100%;
     height: 22rem;
-    display: flex;
-    gap: 2rem;
+    background-color: white;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    border-radius: .4rem;
+
 
     @include sm {
-        height: 18rem;
-        gap: 1rem;
+        height: 35rem;
     }
 
 
-    .img-container {
-        flex: 3;
-        
-        img {
+ 
+
+    .container {
+        display: flex;
+        height: 100%;
+
+
+        @include sm {
+            flex-direction: column;
+        }
+
+
+        .cover {
+            flex: 1;
             width: 100%;
             height: 100%;
-            border-radius: .6rem;
-            cursor: pointer;
-
 
             @include sm {
-                border-radius: unset;
-                object-fit: cover;
+                flex: 3;
+                width: 100%;
+                height: 100%;
             }
+
+        }
+
+        .card-details {
+            flex: 2;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 2rem;
             
-        }
-    }
-
-
-    .details {
-        flex: 3;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 2.5rem;
-
-
-
-        h2 {
-            font-size: 1.9rem;
-            color: $txt-clr-3;
-
+            
             @include sm {
-                font-size: 1.2rem;
-            }
-        }
-
-        .location {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            color: $txt-clr-4;
-            font-size: 1.3rem;
-
-            .icon {
-                font-size: medium;
+                flex: 3;
+                gap: 1rem;
+                order: 2;
             }
 
-            @include sm {
-                font-size: 1rem;
-                gap: .5rem;
+            h1 {
+                font-size: 1.8rem;
+                color: #4c4c4c;
+
+                @include md {
+                    font-size: 1.4rem;
+                }
+                @include sm {
+                    font-size: 1.2rem;
+                }
             }
 
-        }
+            .price {
+                color: map-get($big-stone, "800");
+                font-size: 1.6rem;
+                font-weight: 700;
+                font-family: "Rubik", sans-serif;
 
-        .price {
-            color: $txt-clr-soft;
-            width: 8rem;
-            background-color: $bg-clr-2;
-            text-align: center;
-            border-radius: .4rem;
-            font-weight: 600;
+                @include md {
+                    font-size: 1.5rem;
+                }
 
-            @include sm {
-                font-size: 1.3rem;
-                width: 6rem;
+                @include sm {
+                    font-size: 1.3rem;
+                }
             }
-        }
 
-        .services {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: auto;
-            color: $txt-clr-4;
-
-            .property-details,
-            .property-details>span,
-            .amenities {
+            .property-features {
                 display: flex;
                 align-items: center;
-                gap: 1rem;
+                gap: 1.5rem;
 
-            }
-
-
-
-
-            .property-details {
+                @include sm {
+                    gap: .5rem;
+                }
 
                 span {
-                    padding: .4rem;
-                    border-radius: .3rem;
-                    background-color: $txt-clr-soft;
-                    font-size: 1.3rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                    color: #33272a;
+
+                    @include md {
+                        font-size: 1.4rem;
+                    }
 
                     @include sm {
-                        border-radius: .2rem;
                         font-size: 1rem;
-                    }
-
-                span {
-                    @include sm {
-                        display: none;
-                    }
-                }
-
-                    .icon {
-                        font-size: medium;
-                    }
-
-                }
-            }
-
-            .amenities {
-
-                .icon {
-                    font-size: medium;
-                }
-                .bookmark {
-                    cursor: pointer;
-                    @include sm {
-                        font-size: medium;
-                    }
-
-                    &.active {
-                        color: $bg-clr-2;
+                        gap: .5rem;
                     }
 
 
-                    &:hover {
-                        color: $bg-clr-2;
+                    img {
+                        width: 2.3rem;
+                        height: 2.3rem;
+
+                        @include sm {
+                            width: 2rem;
+                            height: 2rem;
+                        }
+                        
                     }
                 }
             }
 
+
+            .description {
+                font-size: 1.5rem;
+                margin-top: auto;
+                color: #757575;
+
+                @include md {
+                    font-size: 1.4rem;
+                }
+
+                @include sm {
+                    font-size: 1.2rem;
+                }
+
+            }
 
         }
 
 
-
-
     }
-
-
-
 }

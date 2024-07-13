@@ -1,0 +1,121 @@
+@import "../../sass/colors.scss";
+@import "../../sass/responsive.scss";
+
+
+.profile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+
+
+    .informations {
+        width: 100%;
+        border-radius: .4rem;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+        background-color: white;
+
+     
+        .avatar {
+            width: 10rem;
+            height: 10rem;
+            object-fit: cover;
+            border-radius: 50%;
+
+        }
+
+        .name {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: map-get($big-stone, "800");
+            font-size: 1.7rem;
+            font-weight: 600;
+
+            img {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
+
+        .date {
+            font-size: 1.5rem;
+        }
+
+
+        .stars {
+            display: flex;
+            align-items: center;
+            gap: .2rem;
+
+            .star {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+
+            span {
+                font-size: 2rem;
+                font-weight: 700;
+                color: #594a4e;
+                margin-right: 1rem;
+            }
+        }
+
+
+        button {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 2rem;
+            background-color: #f6f6f6;
+            border: 1px solid #eee;
+            border-radius: .4rem;
+            font-size: 1.7rem;
+            color: #594a4e;
+            cursor: pointer;
+            transition: background-color, color .3s ease-out;
+
+            &:hover {
+                background-color: #52b44a;
+                color: white;
+
+                .icon {
+                    color: white;
+                }
+            }
+
+            .icon {
+                font-size: 3rem;
+                color: #52b44a;
+                transition: color .4s ease-in;
+            }
+
+        }
+
+    }
+
+    hr {
+        border: none;
+        border: 1px solid #ddd;
+    }
+
+
+    .posts {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        h3 {
+            color: #594a4e;
+            font-size: 1.7rem;
+        }
+    }
+
+
+
+}

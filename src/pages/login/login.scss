@@ -1,103 +1,100 @@
-@import "../../responsive.scss";
-@import "../../colors.scss";
-
+@import "../../sass/colors.scss";
 
 .login {
-    height: calc(100vh - 100px);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    h1 {
+        font-size: 2rem;
+    }
 
     form {
-        width: 40rem;
+        width: 35rem;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
-        gap: 2rem;
-        margin-top: 5rem;
-        margin-bottom: 5rem;
-        border-radius: 1rem;
+        gap: 1.5rem;
+        background-color: white;
         padding: 2rem;
-        box-shadow: 10px 11px 60px -18px rgba(0, 0, 0, 0.59);
-        -webkit-box-shadow: 10px 11px 60px -18px rgba(0, 0, 0, 0.59);
-        -moz-box-shadow: 10px 11px 60px -18px rgba(0, 0, 0, 0.59);
+        border-radius: .5rem;
 
-        h1 {
-            text-align: center;
-            font-size: 2.8rem;
-            color: #31363F;
-        }
-
-
-
-
-        input {
-            padding: 1rem;
-            border: none;
-            border: 1px solid #e9e6e6;
-            border-radius: .4rem;
-            font-size: 1.3rem;
-            color: #31363F;
-            background-color: #f9f6f6;
-
-        }
-
-        .down {
+        .buttons {
+            background-color: #fcfcfc;
+            border: 1px solid #eee;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            flex-direction: row;
-            gap: 2rem;
-
+            gap: 1rem;
+            padding: .5rem;
+            border-radius: .4rem;
+            cursor: pointer;
 
             span {
                 flex: 1;
-                font-size: 1.3rem;
-                cursor: pointer;
-                text-decoration: underline;
-                color: rgb(72, 71, 71);
-
-                &:hover {
-                    color: #31363F;
-                }
-
-                @include sm {
-                    font-size: 1.2rem;
-                }
-            }
-
-            button {
-                flex: 1;
-                padding: .8rem;
-                border-radius: .3rem;
-                background-color: $bg-clr-2;
-                color: white;
+                color: #52b44a;
+                background-color: inherit;
                 font-size: 1.6rem;
-                cursor: pointer;
+                border-radius: .4rem;
+                padding: 1rem;
+                transition: background-color .4s ease;
 
 
-                &:hover {
-                    background-color: #104366;
+                &.active {
+                    background-color: #52b44a;
+                    color: white;
                 }
             }
         }
 
-        .google-btn {
-            background-color: inherit;
-            padding: 1rem;
+        label {
+            color: #3a3a3e;
             font-size: 1.4rem;
-            cursor: pointer;
-            border-radius: .6rem;
-            color: #31363F;
+        }
+
+        input {
+            border: 1px solid #ddd;
+            border-radius: .5rem;
+            padding: 1rem;
+
+            &::placeholder {
+                color: #3f3f46;
+                font-size: 1.5rem;
+            }
+        }
+
+        .password {
+            border: 1px solid #ddd;
+            border-radius: .5rem;
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            background-color: #f9f6f6;
-
-            img {
-                width: 2.5rem;
-                height: 2.5rem;
+            justify-content: space-between;
+            padding-left: 1rem;
+            
+            input {
+                border: none;
             }
+
+            .eye {
+                cursor: pointer;
+                color: #3f3f46;
+            }
+
+
+        }
+
+        button {
+            background-color: #52b44a;
+            color: white;
+            padding: 1rem;
+            border-radius: .5rem;
+            font-size: 1.7rem;
+            cursor: pointer;
+        }
+
+        span {
+            color: map-get($big-stone, "800");
+            font-size: 1.4rem;
+            cursor: pointer;
         }
 
     }

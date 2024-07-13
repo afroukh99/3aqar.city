@@ -1,190 +1,103 @@
-@import "../../responsive.scss";
-@import "../../colors.scss";
-
+@import "../../sass/colors.scss";
+@import "../../sass/responsive.scss";
 
 .filter {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    margin: 2rem 0rem;
 
-    h1 {
-        font-size: 2.6rem;
-        font-weight: 300;
-        color: $txt-clr-3;
-
-        @include sm {
-            font-size: 2rem;
-        }
-
-        b {
-            font-weight: 500;
-        }
+    @include sm {
+        padding: 0 1rem;
     }
 
-    .map-search {
-        display: none;
-
-
-        @include md {
-            position: absolute;
-            top: 2rem;
-            right: 0;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            color: white;
-            background-color: $bg-clr-2;
-            padding: .5rem;
-            border-radius: 1rem;
-            font-size: 1.4rem;
-            cursor: pointer;
-        }
-
-        span {
-            font-size: 1.3rem;
-
-            @include sm {
-                display: none;
-            }
-        }
-
-    }
-
-
-    form {
+    .wrapper {
+        width: 100%;
         display: flex;
-        flex-direction: column;
+        align-items: center;
         gap: 1.5rem;
 
-
-        .up,
-        .down {
+        .search-btn {
             display: flex;
             align-items: center;
-            flex-wrap: wrap;
-        }
-
-
-        .up {
-            gap: 1rem;
-            justify-content: space-between;
+            gap: .5rem;
+            padding: 1rem;
+            border-radius: .3rem;
+            font-size: 1.4rem;
+            background-color: map-get($big-stone, "800");
+            color: #f6f6f6;
+            cursor: pointer;
 
             @include sm {
-                flex-direction: column;
-                align-items: unset;
+                padding: .7rem;
+                font-size: 1.3rem;
             }
 
-            .address-input {
-                flex: 2;
-                display: flex;
-                align-items: center;
-                gap: 1rem;
-                padding: .6rem;
-                border: 1px solid #B5B3B3;
-                border-radius: .4rem;
-                color: $txt-clr-3;
+            &:hover {
+                background-color: map-get($big-stone, "800");
+            }
 
-                @include md {
-                    flex: 0;
-                    gap: .5rem;
-
-
-                    input::placeholder {
-                        font-size: 10.5px;
-                    }
-
-                }
+            .search-icon {
+                width: 1.8rem;
+                height: 1.8rem;
 
                 @include sm {
-                    max-width: 30rem;
-                }
-
-                input {
-                    flex: 1;
-                    border: none;
-
-                }
-
-            }
-
-            select {
-                flex: 1;
-                color: $txt-clr-3;
-                font-size: 1.2rem;
-                background-color: $txt-clr-soft;
-                border: none;
-                border-radius: .3rem;
-                padding: .8rem;
-                cursor: pointer;
-
-                @include sm {
-                    max-width: 15rem;
-                    padding: .5rem;
+                    width: 1.5rem;
+                    height: 1.5rem;
                 }
             }
-
         }
 
 
-        .down {
-            width: 100%;
-            padding: 1rem;
-            justify-content: space-around;
+        .categories {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            overflow-y: scroll;
 
-
-            @include md {
-                padding: 0rem;
+            &::-webkit-scrollbar {
+                display: none;
             }
 
-            label {
-                font-size: 1.2rem;
-                color: $txt-clr-2;
+            @include sm {
+                gap: 1rem;
+            }
+
+            .category {
+                min-width: 12rem;
+                min-height: 3.5rem;
+                background-color: #fcfcfc;
+                border: 1px solid #dcc;
+                color: map-get($big-stone, "800");
+                border-radius: 2rem;
+                font-size: 1.4rem;
+                cursor: pointer;
+                font-family: "Noto Kufi Arabic", sans-serif;
+                transition: all 0.3s; 
+
+                &.active {
+                    background-color: map-get($big-stone, "800");
+                    color: white;
+                    border: none;
+                }
+
 
                 @include md {
-                    display: none;
-                }
-            }
-
-            input {
-                padding: .5rem;
-                border: 1px solid #B5B3B3;
-                border-radius: .4rem;
-                color: $txt-clr-3;
-
-                @include sm {
+                    font-size: 1.3rem;
+                    height: 3.5rem;
                     width: 11rem;
                 }
-            }
-
-
-            button {
-                width: 8rem;
-                padding: .4rem;
-                border-radius: .4rem;
-                background-color: $bg-clr-2;
-                cursor: pointer;
 
                 @include sm {
-                    width: 4rem;
+                    font-size: 1.2rem;
+                    height: 3rem;
+                    width: 9rem;
                 }
 
-
-                img {
-                    width: 2rem;
-                    height: 2rem;
-
-                    @include sm {
-                        width: 1.5rem;
-                        height: 1.5rem;
-                    }
-                }
             }
-
         }
 
 
     }
-
 
 }

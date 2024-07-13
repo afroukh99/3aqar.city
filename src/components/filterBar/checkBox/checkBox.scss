@@ -1,0 +1,24 @@
+@import "../../../sass/colors.scss";
+@import "../../../sass/responsive.scss";
+
+
+.checkBox {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+
+    input[type="checkbox"]{
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: .3rem;
+        cursor: pointer;
+
+        @include sm {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        
+    }
+}

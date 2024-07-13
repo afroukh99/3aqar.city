@@ -1,112 +1,52 @@
-@import "../../responsive.scss";
-@import "../../colors.scss";
+@import "../../sass/colors.scss";
+@import "../../sass/responsive.scss";
 
-main {
-    flex: 1;
+
+
+.home {
+    width: 100%;
     display: flex;
-    gap: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    
 
 
-    .texts-section {
-        flex: 3;
+    .cards-container {
         display: flex;
-        align-items: center;
-        margin-top: 3rem;
-
-        @include sm {
-            width: 100%;
-        }
-
-
-        .container {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 3rem;
-            padding:  2rem 4rem;
-
-            @include sm {
-                padding: 1rem;
-            }
-
-            h1 {
-                font-size: 4.8rem;
-                color: $txt-clr-2;
-
-                @include sm {
-                    font-size: 3rem;
-                }
-            }
-
-            p {
-                font-size: 1.4rem;
-                line-height: 1.6;
-                color: $txt-clr-4;
-
-                @include sm {
-                    font-size: 1.2;
-                }
-            }
-
-
-            .details {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-
-                @include sm {
-                    display: none;
-                }
-
-                .item {
-                    display: flex;
-                    flex-direction: column;
-                    gap: .3rem;
-                    color: $txt-clr-3;
-
-
-
-                    h2 {
-                        font-size: 2.7rem;
-
-                        @include sm {
-                            font-size: 2.4rem;
-                        }
-                    }
-
-                    span {
-                        font-size: 1.2rem;
-
-                        @include sm {
-                            font-size: 1.2rem;
-                        }
-                    }
-                }
-            }
-
-
-        }
-
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2rem;
     }
 
 
-    .img-section {
-        flex: 2;
+
+    .pagination {
         display: flex;
         align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 3rem;
 
-        @include md {
-            display: none;
+        @include sm {
+            gap: 1rem;
         }
 
+        .page {
+            padding: 1rem 2rem;
+            border-radius: .3rem;
+            color: #454548;
+            background-color: #d1d2d3;
+            border: 1px solid #ddd;
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: map-get($big-stone , '950' );
+            cursor: pointer;
 
-        img {
-            width: 100%;
-            height: 90%;
-            object-fit: cover;
-            border-radius: .4rem;
-
+            @include sm {
+                padding: .75rem 1.5rem;
+            }
 
         }
     }

@@ -1,0 +1,93 @@
+@import "../../sass/responsive.scss";
+@import "../../sass/colors.scss";
+
+
+
+
+.details-wrapper {
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+
+    //Global styling Start here
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        h2 {
+            color: $txt-clr-2;
+            font-size: 1.8rem;
+        }
+
+        .inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            background-color: $bg-clr-4;
+            padding: 1.5rem;
+            border-radius: .4rem;
+
+            .item {
+                display: flex;
+                align-items: center;
+                gap: 1.5rem;
+                width: 19rem;
+
+
+                img {
+                    width: 2rem;
+                    height: 2rem;
+                }
+
+                span {
+                    color: $txt-clr-3;
+                    font-size: 1.4rem;
+                }
+
+                p {
+                    color: $bg-clr-1;
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                }
+
+            }
+        }
+    }
+    //Global styling Start here
+
+
+
+
+    .general-details {}
+
+
+
+    .property-details {
+        .inner {
+            .item {
+                width: unset;
+                 
+
+                span {
+                    color: $bg-clr-1;
+                    font-size: 1.3;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+
+
+    .map-section {
+        width: 100%;
+        height: 20rem;
+    }
+
+
+
+}

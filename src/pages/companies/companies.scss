@@ -1,0 +1,106 @@
+.companies {
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    header {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+
+
+        .map-search {
+            flex: 3;
+            height: 4.5rem;
+            padding: 0rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #ccc;
+            background-color: white;
+            border-radius: .4rem;
+
+            input {
+                border: none;
+            }
+        }
+
+        .name-search {
+            flex: 3;
+            height: 4.5rem;
+            padding: 0rem 1rem;
+            border: none;
+            border: 1px solid #ccc;
+            border-radius: .4rem;
+        }
+
+        button {
+            flex: 1;
+            color: white;
+            background-color: #52b44a;
+            padding: 1rem;
+            border-radius: .4rem;
+            font-size: 1.6rem;
+        }
+    }
+
+    hr{
+        height: 0;
+        border: 1px solid #ddd;
+    }
+
+    .companies-list {
+        display: flex;
+        justify-content: space-between;
+
+
+        .company {
+            width: 25rem;
+            height: 27rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            border: 1px solid #ccc;
+            border-radius: .4rem;
+            background-color: white;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            transition: box-shadow .4s ease;
+
+            &:hover {
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            }
+
+
+            img {
+                border-bottom: 1px solid #ccc;
+                padding: 1rem;
+                flex: 2;
+            }
+
+            .text {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: .5rem;
+                padding: 0rem  1rem;
+
+                .name {
+                    font-size: 1.5rem;
+                    margin-bottom: .5rem;
+                }
+
+                span {
+                    font-size: 1.3rem;
+                }
+
+            }
+        }
+    }
+
+}

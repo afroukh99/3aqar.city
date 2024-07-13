@@ -1,0 +1,96 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  
+    h1 {
+        margin-bottom: 2rem;
+        text-align: center;
+        color: #332f30;
+    }
+
+    .up {
+        height: 40rem;
+        display: flex;
+        gap: 2rem;
+
+
+        form {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+
+            input,
+            textarea {
+                border: none;
+                border: 1px solid #ddd;
+                padding: 1rem;
+                border-radius: .5rem;
+                resize: none;
+            }
+
+            button {
+                background-color: #52b44a;
+                color: white;
+                font-size: 1.6rem;
+                border-radius: .4rem;
+                padding:  1rem;
+                cursor: pointer;
+            }
+
+        }
+
+        .map {
+            flex: 1;
+            height: 100%;
+        }
+
+    }
+
+
+    .down {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+        .right,.left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+
+            .icon {
+                width: 12rem;
+                height: 12rem;
+                color: #006169;
+                background-color: #e5eff0;
+                padding: 1.5rem;
+                border-radius: 2rem;
+            }
+
+            h2 {
+
+            }
+
+            span {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                font-size: 1.5rem;
+
+                .flag {
+                    width: 3rem;
+                    height: 3rem;
+                }
+            }
+
+        }
+
+    }
+
+
+}

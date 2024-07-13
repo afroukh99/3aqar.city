@@ -1,0 +1,112 @@
+@import "../../sass/colors.scss";
+@import "../../sass/responsive.scss";
+
+
+
+
+.details-container {
+    width: 100%;
+    min-height: 35rem;
+    border: 1px solid #f6f6f6;
+    border-radius: .4rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px, rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 2px 2px -1px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px, rgba(42, 51, 70, 0.03) 0px 10px 10px -5px, rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
+    font-family: "Rubik", sans-serif;
+    background-color: white;
+    border: 1px solid #eee;
+
+    .row {
+        display: flex;
+        align-items: center;
+        padding: 2rem;
+
+       
+
+        &:nth-child(2n) {
+            background-color: #f5f5f5;
+        }
+
+        .item {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            .prop {
+                display: flex;
+                align-items: center;
+
+                .name {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+
+                    span {
+                        color: gray;
+                        font-size: 1.8rem;
+
+                        @include md {
+                            font-size: 1.6rem;
+                        }
+
+                        @include sm {
+                            font-size: 1.4rem;
+                        }
+
+
+                    }
+
+                    .icon {
+                        color: gray;
+                        font-size: 1.6rem;
+
+                        @include md {
+                            width: 2rem;
+                            height: 2rem;
+                        }
+
+                        @include sm {
+                            width: 2rem;
+                            height: 2rem;
+                        }
+
+                    }
+                }
+            }
+
+            .value {
+                color: #52b44a;
+                font-size: 1.8rem;
+                font-weight: 600;
+
+                @include md {
+                    font-size: 1.6rem;
+                }
+
+                @include sm {
+                    font-size: 1.4rem;
+                }
+
+
+            }
+
+            .icon {
+                width: 2.5rem;
+                height: 2.5rem;
+
+                @include sm {
+                    width: 2rem;
+                    height: 2rem;
+                }
+
+
+            }
+
+
+        }
+
+
+    }
+
+}

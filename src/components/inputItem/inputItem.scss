@@ -1,0 +1,22 @@
+.input-item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: .2rem;
+
+
+    input {
+        padding: 1rem;
+        border: none;
+        border: 1px solid #e9e6e6;
+        border-radius: .4rem;
+        font-size: 1.3rem;
+        color: #31363F;
+        background-color: #f9f6f6;
+    }
+
+    .error-msg {
+        color: #ef4444;
+        font-size: 1.2rem;
+    }
+}

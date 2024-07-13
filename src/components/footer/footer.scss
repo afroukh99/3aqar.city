@@ -1,0 +1,189 @@
+@import "../../sass/colors.scss";
+@import "../../sass/responsive.scss";
+
+.footer {
+    width: 100%;
+    min-height: 10rem;
+    padding: 3rem;
+    display: flex;
+    gap: 3rem;
+    background-color: white;
+    box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px 6px 6px -3px, rgba(14, 63, 126, 0.04) 0px 12px 12px -6px, rgba(14, 63, 126, 0.04) 0px 24px 24px -12px;
+
+
+    
+ 
+
+
+
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        padding: 1rem;
+
+
+        @include sm {
+            padding: 0;
+            gap: 2rem;
+        }
+
+
+        .top {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+
+            .search-options {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+
+
+                @include sm {
+                    gap: 1rem;
+                }
+
+                h1 {
+                    font-size: 2.2rem;
+                    color: map-get($big-stone , "950");
+                    margin-left: auto;
+
+
+                    @include sm {
+                        font-size: 1.8rem;
+                    }
+
+                }
+
+                .options-wrapper {
+                    display: flex;
+                    gap: 3rem;
+
+                    .options {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1.5rem;
+
+                        a {
+                            font-size: 1.6rem;
+                            color: map-get($big-stone, '700');
+                            font-family: "Rubik", sans-serif;
+
+                            @include sm {
+                                font-size: 1.1rem;
+                            }
+
+
+                        }
+
+
+
+                        span {
+                            display: flex;
+                            align-items: center;
+                            gap: 1rem;
+
+                            .icon {
+                                color: #7f7f7f;
+
+                                @include sm {
+                                    width: 2rem;
+                                    height: 2rem;
+                                }
+                            }
+
+                        }
+
+                    }
+
+                }
+
+
+            }
+
+
+            .company {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+
+
+                @include sm {
+                    display: none;
+                }
+
+                img {
+                    width: 10rem;
+                    height: 10rem;
+
+                    @include sm {
+                        width: 5rem;
+                        height: 5rem;
+                    }
+                }
+
+                p {
+                    color: map-get($big-stone , "950");
+                    font-size: 1.6rem;
+
+                    @include sm {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+
+
+        hr {
+            border: none;
+            border: 1px solid #f6f6f6;
+        }
+
+
+        // Footer Down 
+
+        .down {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .copy-rights {
+                color: map-get($big-stone, "900");
+                font-size: 1.6rem;
+
+                @include sm {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .social-links {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+
+
+                @include sm {
+                    gap: 1rem;
+                }
+
+
+                .icon {
+                    color: #7f7f7f;
+
+
+                    @include sm {
+                        width: 2rem;
+                        height: 2rem;
+                    }
+                }
+            }
+
+
+        }
+
+
+    }
+}
